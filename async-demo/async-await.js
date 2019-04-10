@@ -1,24 +1,20 @@
-// console.log('before');
-// getUser(1, getRepos);
-// console.log('after');
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
 
-// function getRepos(user) {
-//   getRepos(user.gitUsername, getCommits);
-// }
-
-// function getCommits(repos) {
-//   getCommits(repo, displayCommits);
-// }
-
-// function displayCommits(commits) {
-//   console.log(commits);
-// }
-
-getUser(1)
-  .then(user => getRepos(user.gitUsername))
-  .then(repos => getCommits(repos[0]))
-  .then(commits => console.log(`Commits : ${commits}`))
-  .catch(err => console.log(`Error: ${err.message}`));
+async function displayCommits() {
+  try {
+    const user = await getUser(1);
+    console.log(user.gitUsername);
+    const repos = await getRepos(user.gitUsername);
+    console.log(respos);
+    const commits = getCommits(repos[0]);
+    console.log(commits);
+  } catch (err) {
+    console.log(`Error: ${err.message}`);
+  }
+}
+displayCommits();
 
 function getUser(id) {
   return new Promise((resolve, reject) => {
