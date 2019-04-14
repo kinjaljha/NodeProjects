@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 // getCustomer(1, customer => {
 //   console.log('Customer: ', customer);
@@ -49,10 +50,10 @@ function getTopMovies() {
   });
 }
 
-function sendEmail(email, movies) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve();
-    }, 2000);
-  });
-}
+// function sendEmail(email, movies) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve();
+//     }, 2000);
+//   });
+// }
